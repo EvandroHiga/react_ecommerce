@@ -4,15 +4,16 @@ import { CartContext } from "../../providers/cart";
 function Cart(){
     const { cartProducts } = useContext(CartContext);
 
-    console.log(cartProducts);
-
     return(
         <>
             <h3>Cart</h3>
-            <div>
-                <span></span>
-                <span></span>
-            </div>
+            {cartProducts.map((p) => (
+                <div>
+                    <span>{p.name}</span>
+                    <span>{p.price}</span>
+                </div>
+            ))}
+            
             <form >
                 <div>
                     <label for="name"> Name </label> <input id="name" type="text"/>
