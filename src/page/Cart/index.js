@@ -32,14 +32,14 @@ function Cart(){
             
             <form onSubmit={handleSubmit}>
                 <div>
-                    <label for="name"> Name </label>
+                    <label htmlFor="name"> Name </label>
                     <input id="name" type="text" value={costumer.name} onChange={handleInput} />
                 </div>
                 <div>
-                    <label for="address"> Address </label>
+                    <label htmlFor="address"> Address </label>
                     <input id="address" type="text" value={costumer.address} onChange={handleInput} />
                 </div>
-                <button class="button" type="submit">Purchase</button>
+                <button type="submit">Purchase</button>
             </form>
         </>
     );

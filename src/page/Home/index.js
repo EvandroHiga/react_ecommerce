@@ -22,7 +22,7 @@ function Home() {
       <br />
 
       {products.map((product) => (
-        <div style={{ flexDirection:"column" }}>
+        <div key={product.id} style={{ flexDirection:"column" }}>
           <p>
             <Link to = {`/products/${product.id}`}> # {product.name} </Link>
           </p>
