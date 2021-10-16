@@ -1,19 +1,17 @@
 import { GlobalStyle } from "./GlobalStyles";
+import { CartProvider } from "./providers/cart";
 
-import TopBar from "./components/TopBar";
 import Routes from "./routes";
 
 function App() {
-  let title = "Minha Loja";
-  
   return (
     <>
       <GlobalStyle />
-      <TopBar title = {title}/>
-      <Routes />
+      <CartProvider>
+        <Routes />
+      </CartProvider>
     </>
   );
-  
 }
 
 export default App;

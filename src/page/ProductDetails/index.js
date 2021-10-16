@@ -1,8 +1,8 @@
-import { useParams } from "react-router";
+import { useParams } from "react-router"; // hook do Router DOM
 import { products } from "../../products";
 
 function ProductDetails(){
-  const {id} = useParams();
+  const {id} = useParams(); // hook do Router DOM
   let product = products.find(p => p.id == id);
   
   return(
